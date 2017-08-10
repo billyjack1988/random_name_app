@@ -1,0 +1,27 @@
+.show {
+    display: block;
+}
+
+.head_color {
+    color: white
+}
+
+.font_size {
+    font-size: 400%
+}
+
+.font {
+    font-size: 300%
+}
+
+.back_gr1 {
+    background-image: url("/images/batman.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back_gr2 {
+    background-image: url("/images/uknow.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+}

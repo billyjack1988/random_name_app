@@ -1,0 +1,24 @@
+<h1 class = "font_size head_color"> Mined Minds Random Pairing App</h1>
+<form class = "font head_color" method = "post" action = "rand_names" id = "text_box">
+    <input type ="number" id ="myInput" oninput = "myFunction()" >
+    <p id = "demo"></p>
+    <br>
+    <input type = "submit">
+</form>
+<body class = "back_gr1"> 
+</body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput").value;
+        document.getElementById("demo").innerHTML = " Enter Name :<br>";
+        for (var i = 1; i <= x; i++) {
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "text" + i;
+            input.id = "name";
+            input.required = true;
+            document.getElementById("demo").appendChild(input).value;
+        }
+    }
+</script>
