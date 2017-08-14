@@ -25,3 +25,8 @@
     background-repeat: no-repeat;
     background-size: 100% 110%;
 }
+
+.cap {
+    text-transform: capitalize;
+    font-family: "Comic Sans MS", cursive, sans-serif
+}

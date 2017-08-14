@@ -1,11 +1,11 @@
-<h1 class = "font_size head_color"> Mined Minds Random Pairing App</h1>
+<h1 class = "font_size head_color cap"> Mined Minds Random Pairing App</h1>
 <form class = "font head_color" method = "post" action = "rand_names" id = "text_box">
     <input type ="number" id ="myInput" oninput = "myFunction()" >
     <p id = "demo"></p>
     <br>
     <input type = "submit">
 </form>
-<body class = "back_gr1"> 
+<body class = "back_gr1" onload = "sound()"> 
 </body>
 
 <script>
@@ -20,5 +20,9 @@
             input.required = true;
             document.getElementById("demo").appendChild(input).value;
         }
+    }
+    function sound(){
+        var s = new Audio('/music/sound.mp3');
+        s.play();
     }
 </script>
