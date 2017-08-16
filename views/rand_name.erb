@@ -1,27 +1,44 @@
 <h1 class = "font_size head_color cap"> Mined Minds Random Pairing App</h1>
-<form class = "font head_color" method = "post" action = "rand_names" id = "text_box">
-    <input type ="number" id ="myInput" oninput = "myFunction()" >
+<form class = "font head_color" method = "post" action = "arraypage" id = "text_box">
+    <input type ="number" min = 2 autofocus = "autofocus" id ="myInput" oninput = "myFunction()">
+    <button type = "button" onclick="extrabox()">Add a box</button>
+    <button type = "button" onclick="takebox()">Remove a box</button> 
     <p id = "demo"></p>
     <br>
     <input type = "submit">
+   
 </form>
-<body class = "back_gr1" onload = "sound()"> 
+
+
+<body class = "back_gr1" onload = "sound()">
 </body>
 
 <script>
     function myFunction() {
-        var x = document.getElementById("myInput").value;
+         var x = document.getElementById("myInput").value;
         document.getElementById("demo").innerHTML = " Enter Name :<br>";
         for (var i = 1; i <= x; i++) {
             var input = document.createElement("input");
             input.type = "text";
-            input.name = "text" + i;
+            input.name = "studentname[]";
             input.id = "name";
             input.required = true;
             document.getElementById("demo").appendChild(input).value;
         }
-    }
-    function sound(){
+     }
+function extrabox() {
+    var input = document.createElement("input");
+    input.type = "text";
+    input.name = "studentname[]";
+    input.id = "name";
+    input.required = true;
+    document.getElementById("demo").appendChild(input).value;
+}
+ function takebox(){
+     var y = document.getElementById("demo");
+     y.removeChild(y.lastChild);
+}
+ function sound(){
         var s = new Audio('/music/sound.mp3');
         s.play();
     }

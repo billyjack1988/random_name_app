@@ -21,16 +21,29 @@ def names_at_random (my_people)
         random.pop 
         p random 
     end
-    pairs = ""
-    random.each do |pair|
-        if pair.include? (pair[2])
-                pairs << pair[0] + ", " + pair[1] + ", and " + pair[2] + "<br>"
-        else
-                pairs << pair[0] + " and " + pair[1] + "<br>"
-        end
-    end
-    pairs
 end
+
+def arr_slice(random)
+    pairs = []
+	random.each do |value|
+		if value.length == 3
+			x = "#{value[0]}, #{value[1]}, and #{value[2]}" + "<br>"
+		else
+		 	x = "#{value[0]} and #{value[1]}" + "<br>"
+		end
+		pairs << x
+	end
+	pairs
+end
+
+def string1(arr)
+	empty_str = ""
+		arr.each do |pair|
+			
+			empty_str << pair
+		end
+	empty_str
+end 
 
 
 # def names_at_random(my_name, my_people)

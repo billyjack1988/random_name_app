@@ -5,9 +5,18 @@ get '/' do
     erb :rand_name
 end
 
-post '/rand_names' do
-    my_people= params.values
+post '/arraypage' do
+    my_people= params[:studentname]
     names = names_at_random(my_people)
-# p "#{names}yooooooooooooooooooooooooooooooooooooooooooooooo"
-    erb :results, locals: {result: names} 
+    nam = arr_slice(names)
+# p "#{nam}yooooooooooooooooooooooooooooooooooooooooooooooo"
+    erb :arraypage, locals: {result: nam} 
 end
+
+post '/results' do
+    fin_result = params[:inputs]
+    f_result = string1(fin_result)
+    erb :results, locals: {fuck: f_result}
+end
+
+
